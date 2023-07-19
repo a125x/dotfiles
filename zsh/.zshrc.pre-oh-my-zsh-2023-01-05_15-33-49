@@ -1,0 +1,39 @@
+#PROMPT='%n@mac-air in %~ ~ %%'
+#PS1='%n@%m %/ %% '
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/a125x/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/a125x/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/a125x/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/a125x/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+#brew
+export PATH=/opt/homebrew/bin:$PATH
+export PATH=/Users/a125x/.local/bin:$PATH
+
+#jupyter
+export PATH=/Users/a125x/Library/Jupyter/bin:$PATH
+
+alias myip="curl http://ipecho.net/plain; echo"
+alias ..="cd .."
+alias ...='cd ../..'
+alias c='clear'
+alias v='vim'
+alias p='python'
+alias safari='open -a Safari'
+alias eun='euporie-notebook'
+alias jn='jupyter notebook'
+alias chrome='open -a Google\ Chrome'
+
+#tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
+
+

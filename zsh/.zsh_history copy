@@ -1,0 +1,10 @@
+ls -a
+vim .zprofile
+vim .config/zsh
+vim .config/zsh
+ls .config
+tree .config
+mkdir .config/zsh
+mv .config/zsh ./.zshrc
+exec zsh
+: 1674084943:0;mkdir .config/zsh

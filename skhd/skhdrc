@@ -1,0 +1,81 @@
+# -- Changing Window Focus --
+
+# change window focus within space
+alt - i : yabai -m window --focus south
+alt - e : yabai -m window --focus north
+alt - n : yabai -m window --focus west
+alt - o : yabai -m window --focus east
+
+
+# -- Modifying the Layout --
+
+# rotate layout clockwise
+shift + alt - r : yabai -m space --rotate 270
+
+# flip along y-axis
+shift + alt - y : yabai -m space --mirror y-axis
+
+# flip along x-axis
+shift + alt - g : yabai -m space --mirror x-axis
+
+# toggle window float
+shift + alt - t : yabai -m window --toggle float --grid 8:8:1:1:6:6
+
+
+# -- Modifying Window Size --
+
+# maximize a window
+shift + alt - m : yabai -m window --toggle zoom-fullscreen
+
+# balance out tree of windows (resize to occupy same area)
+shift + alt - b : yabai -m space --balance
+
+# toggle sticky(+float), topmost, picture-in-picture
+alt - p : yabai -m window --toggle sticky --toggle topmost --toggle pip
+
+# -- Moving Windows Around --
+
+# swap windows
+shift + alt - i : yabai -m window --swap south
+shift + alt - e : yabai -m window --swap north
+shift + alt - n : yabai -m window --swap west
+shift + alt - o : yabai -m window --swap east
+
+# move window and split
+ctrl + alt - i : yabai -m window --warp south
+ctrl + alt - e : yabai -m window --warp north
+ctrl + alt - n : yabai -m window --warp west
+ctrl + alt - o : yabai -m window --warp east
+
+# move window to prev and next space
+ctrl + alt - p : yabai -m space --move prev;
+ctrl + alt - b : yabai -m space --move next;
+
+# move window to space #
+alt - 1 : yabai -m window --space 1;
+alt - 2 : yabai -m window --space 2;
+alt - 3 : yabai -m window --space 3;
+alt - 4 : yabai -m window --space 4;
+alt - 5 : yabai -m window --space 5;
+alt - 6 : yabai -m window --space 6;
+alt - 7 : yabai -m window --space 7;
+
+
+# -- Starting/Stopping/Restarting Yabai --
+
+# stop/start/restart yabai
+ctrl + alt - q : yabai --stop-service
+ctrl + alt - s : yabai --start-service
+ctrl + alt - r : yabai --restart-service
+
+# apps
+ctrl + alt + cmd - f : open /Applications/Safari.app/
+ctrl + alt + cmd - i : open /Applications/iTerm.app
+ctrl + alt + cmd - l : open /Applications/Vial.app
+ctrl + alt + cmd - a : open /Applications/DeepL.app/
+ctrl + alt + cmd - t : open /Applications/Telegram.localized/Telegram.app/
+ctrl + alt + cmd - p : open /Applications/Planet\ VPN.app/
+ctrl + alt + cmd - d : open /Applications/Discord.app/
+ctrl + alt + cmd - u : open /Applications/Numi.app/
+ctrl + alt + cmd - c : open /Applications/AppCleaner.app/
+ctrl + alt + cmd - r : open /System/Library/CoreServices/Finder.app
