@@ -10,29 +10,22 @@ alt - o : yabai -m window --focus east
 # -- Modifying the Layout --
 
 # rotate layout clockwise
-shift + alt - r : yabai -m space --rotate 270
-
+alt - r : yabai -m space --rotate 90
 # flip along y-axis
-shift + alt - y : yabai -m space --mirror y-axis
-
+alt - y : yabai -m space --mirror y-axis
 # flip along x-axis
-shift + alt - g : yabai -m space --mirror x-axis
-
+alt - g : yabai -m space --mirror x-axis
 # toggle window float
-shift + alt - t : yabai -m window --toggle float --grid 8:8:1:1:6:6
-
+alt - t : yabai -m window --toggle float --grid 8:8:1:1:6:6
 
 # -- Modifying Window Size --
 
 # maximize a window
-shift + alt - m : yabai -m window --toggle zoom-fullscreen
-
+alt - m : yabai -m window --toggle zoom-fullscreen
 # balance out tree of windows (resize to occupy same area)
-shift + alt - b : yabai -m space --balance
-
+alt - b : yabai -m space --balance
 # toggle sticky(+float), topmost, picture-in-picture
-alt - p : yabai -m window --toggle sticky --toggle topmost --toggle pip
-
+alt - p : yabai -m window --toggle sticky --toggle pip --toggle topmost 
 # -- Moving Windows Around --
 
 # swap windows
@@ -48,8 +41,8 @@ ctrl + alt - n : yabai -m window --warp west
 ctrl + alt - o : yabai -m window --warp east
 
 # move window to prev and next space
-ctrl + alt - p : yabai -m space --move prev;
-ctrl + alt - b : yabai -m space --move next;
+alt - l : yabai -m space --move prev;
+alt - w : yabai -m space --move next;
 
 # move window to space #
 alt - 1 : yabai -m window --space 1;
@@ -60,7 +53,19 @@ alt - 5 : yabai -m window --space 5;
 alt - 6 : yabai -m window --space 6;
 alt - 7 : yabai -m window --space 7;
 
+# resize window
+ctrl + alt - right: yabai -m window --resize right:100:0
+ctrl + alt - left: yabai -m window --resize left:-100:0
+ctrl + alt - up: yabai -m window --resize top:0:-100
+ctrl + alt - down: yabai -m window --resize bottom:0:100
+shift + alt - left: yabai -m window --resize right:-100:0
+shift + alt - right: yabai -m window --resize left:100:0
+shift + alt - down: yabai -m window --resize top:0:100
+shift + alt - up: yabai -m window --resize bottom:0:-100
 
+# rightcreate / destroy space
+alt - h : yabai -m space --create 
+alt - d : yabai -m space --destroy
 # -- Starting/Stopping/Restarting Yabai --
 
 # stop/start/restart yabai
@@ -77,5 +82,7 @@ ctrl + alt + cmd - t : open /Applications/Telegram.localized/Telegram.app/
 ctrl + alt + cmd - p : open /Applications/Planet\ VPN.app/
 ctrl + alt + cmd - d : open /Applications/Discord.app/
 ctrl + alt + cmd - u : open /Applications/Numi.app/
-ctrl + alt + cmd - c : open /Applications/AppCleaner.app/
-ctrl + alt + cmd - r : open /System/Library/CoreServices/Finder.app
+ctrl + alt + cmd - s : open /Applications/Sensei.app/
+ctrl + alt + cmd - r : open /System/Library/CoreServices/Finder.app/
+ctrl + alt + cmd - v : open /Applications/VSCodium.app/
+ctrl + alt + cmd - m : open /Applications/mpv.app/

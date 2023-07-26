@@ -17,7 +17,6 @@ zstyle ':omz:update' frequency 13
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 plugins=(git zsh-z zsh-autosuggestions zsh-syntax-highlighting web-search)
-
 source $ZSH/oh-my-zsh.sh
 autoload -U compinit && compinit
 

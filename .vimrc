@@ -49,16 +49,7 @@ set clipboard=unnamed
 set ruler
 set guicursor=a:blinkon0
 set hidden
-noremap <C-N> :bnext<CR>
-noremap <C-P> :bprev<CR>
-nnoremap <M-BS> db
-noremap <M-Left> b
-noremap <M-Right> e
-noremap! <M-BS> <C-W>
-noremap! <M-Left> <C-Left>
-noremap! <M-Right> <C-Right>
-snoremap <M-Left> <C-O>b
-snoremap <M-Right> <C-O>e
 
 " Выключаем звук в Vim
 set visualbell t_vb=
+
