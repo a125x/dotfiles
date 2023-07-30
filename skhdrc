@@ -79,6 +79,10 @@ ctrl - 5 : yabai -m space --focus 5;
 ctrl - 6 : yabai -m space --focus 6;
 ctrl - 7 : yabai -m space --focus 7;
 
+# move between spaces back and forth without animation from macos
+ctrl - left : yabai -m space --focus prev
+ctrl - right : yabai -m space --focus next
+
 # -- Starting/Stopping/Restarting Yabai --
 
 # stop/start/restart yabai
