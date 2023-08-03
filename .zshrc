@@ -1,53 +1,12 @@
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.config/zsh/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-zstyle ':omz:update' frequency 13
-
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git zsh-z zsh-autosuggestions zsh-syntax-highlighting web-search)
-source $ZSH/oh-my-zsh.sh
+#plugins=(git zsh-z zsh-autosuggestions zsh-syntax-highlighting web-search)
 autoload -U compinit && compinit
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='mvim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-#PROMPT='%n@mac-air in %~ ~ %%'
-#PS1='%n@%m %/ %% '
+autoload -U colors && colors	# Load colors
+export EDITOR='vim'
+set -o emacs
+PS1="%B%{$fg[yellow]%}%1d % → $reset_color%b"
+setopt autocd		# Automatically cd into typed directory.
+stty stop undef		# Disable ctrl-s to freeze terminal.
+setopt interactive_comments
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -67,7 +26,7 @@ unset __conda_setup
 #brew
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=/Users/a125x/.local/bin:$PATH
-
+export PATH="/opt/homebrew/sbin:$PATH"
 #jupyter
 export PATH=/Users/a125x/Library/Jupyter/bin:$PATH
 
@@ -89,9 +48,8 @@ alias uncomp='tar -xvf'
 alias cde='codium -r'
 alias yab='yabai --start-service'
 alias nyab='yabai --stop-service'
-eval $(thefuck --alias)
-#tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
-#!/bin/zsh
+alias ls='exa'
+tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
 # Inspired by https://github.com/m-ou-se/config/blob/master/shellrc.
 
@@ -131,3 +89,5 @@ set_color 53 8f3f71 # dark magenta
 
 
 source /Users/a125x/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+source /Users/a125x/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
