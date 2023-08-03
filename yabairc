@@ -63,7 +63,7 @@ yabai -m config window_topmost float
 
 # disable specific apps
 yabai -m rule --add app="^System Settings$" manage=off
-yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^DeepL$" manage=off
 yabai -m rule --add app="^Planet VPN$" manage=off
 yabai -m rule --add app="^mpv$" manage=off
 yabai -m rule --add app="^Numi$" manage=off
