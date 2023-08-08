@@ -14,23 +14,17 @@ bindkey -M menuselect '^[[Z' reverse-menu-complete # shift tab
 
 autoload -U colors && colors	# Load colors
 export EDITOR='vim'
-set -o emacs
+set -o vi   
+
 setopt PROMPT_SUBST
 
 source ~/.config/zsh/plugins/git/.git-prompt.sh
-# git prompt options
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWSTASHSTATE=true
-GIT_PS1_SHOWUNTRACKEDFILES=true
-GIT_PS1_SHOWUPSTREAM="auto"
-GIT_PS1_STATESEPARATOR=' '
-GIT_PS1_HIDE_IF_PWD_IGNORED=true
-GIT_PS1_COMPRESSSPARSESTATE=true
 
 precmd () { __git_ps1 %F{yellow}"%1d"%f %F{magenta}"%s → "%f }
+#PROMPT="$(__git_ps1 " \[\033[1;32m\] (%s)\[\033[0m\]")\$"
+#PS1="%{$fg[yellow]%}%1d → %{$reset_color%} $(__git_ps1)"
 
-#PS1="%{$fg[yellow]%}%1d → %{$reset_color%} %c$(__git_ps1 " (%s)")"
-setopt autocd		# Automatically cd into typed directory.
+setopt autocd		# Automatically cd into typed y
 stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
 
@@ -40,7 +34,8 @@ SAVEHIST=10000000
 HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 
 # never beep
-setopt NO_BEEP
+unsetopt BEEP
+unsetopt LIST_BEEP
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -67,7 +62,7 @@ export PATH=/Users/a125x/Library/Jupyter/bin:$PATH
 alias myip="curl http://ipecho.net/plain; echo"
 alias ..="cd .."
 alias ...='cd ../..'
-alias c='clear'
+
 alias v='vim'
 alias m='mvim'
 alias p='python'
@@ -83,6 +78,8 @@ alias cde='codium -r'
 alias yab='yabai --start-service'
 alias nyab='yabai --stop-service'
 alias ls='exa'
+alias lf='sudo lf'
+alias icat="kitty +kitten icat"
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
 # Inspired by https://github.com/m-ou-se/config/blob/master/shellrc.
@@ -121,6 +118,10 @@ set_color 22 79740e # dark green
 set_color 52 9d0006 # dark red
 set_color 53 8f3f71 # dark magenta
 
+# theme for bat
+export BAT_THEME="gruvbox-dark"
 
+source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#504945,underline"
 source ~/.docker/init-zsh.sh || true # Added by Docker Desktop
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
