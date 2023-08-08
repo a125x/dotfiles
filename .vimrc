@@ -1,9 +1,22 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+
+" colors
 autocmd vimenter * ++nested colorscheme gruvbox
+colorscheme gruvbox
 set background=dark
+let g:gruvbox_contrast_dark='hard'
 filetype plugin on
+"gruvbox theme, too bright one for me. Currently unien seoul256
+"let g:lightline = {}
+"let g:lightline.colorscheme = 'gruvbox'
+"let g:lightline_gruvbox_style = 'hard'
+let g:lightline = {
+          \ 'colorscheme': 'seoul256',
+                \ }
+
+let g:lf_replace_netrw = 1 " Open lf when vim opens a directory
 
 set nocompatible
 set number
@@ -30,8 +43,6 @@ set mousehide "Спрятать курсор мыши когда набирае�
 set termencoding=utf-8 "Кодировка терминала
 set novisualbell "Не мигать 
 set t_vb= "Не пищать! (Опции 'не портить текст', к сожалению, нету)
-" Удобное поведение backspace
-set backspace=indent,eol,start whichwrap+=<,>,[,]
 " Вырубаем черточки на табах
 set showtabline=1
 
@@ -53,3 +64,18 @@ set hidden
 " Выключаем звук в Vim
 set visualbell t_vb=
 
+set guifont=Inconsolata\ LGC\ Nerd\ Font\ Mono\ 14
+
+" set <M-BS>=0x1b 0x7f
+" set <M-Left>=^[b
+" set <M-Right>=^[f
+nnoremap <M-BS> db
+noremap <M-Left> b
+noremap <M-Right> e
+ noremap! <M-BS> <C-W>
+noremap! <M-Left> <C-Left>
+noremap! <M-Right> <C-Right>
+snoremap <M-Left> <C-O>b
+snoremap <M-Right> <C-O>e
+
+set noshowmode " stop showing insert cause now in's in the lightline
