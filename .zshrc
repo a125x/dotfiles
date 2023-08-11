@@ -11,11 +11,25 @@ compinit
 _comp_options+=(globdots)		# Include hidden files.
 bindkey -M menuselect '^[[Z' reverse-menu-complete # shift tab 
 
+# all the vi mode fixes to make it usable
 autoload -U colors && colors	# Load colors
 export EDITOR='vim'
 set -o vi   
 
+vi-search-fix() {
+zle vi-cmd-mode
+zle .vi-history-search-backward
+}
+
+autoload vi-search-fix
+zle -N vi-search-fix
+bindkey -M viins '\e/' vi-search-fix
 setopt PROMPT_SUBST
+
+bindkey "^?" backward-delete-char
+bindkey "^W" backward-kill-word 
+bindkey "^H" backward-delete-char      # Control-h also deletes the previous char
+bindkey "^U" backward-kill-line      
 
 source ~/.config/zsh/plugins/git/.git-prompt.sh
 
@@ -79,6 +93,7 @@ alias nyab='yabai --stop-service'
 alias ls='exa'
 alias sf='sudo lf'
 alias icat="kitty +kitten icat"
+alias n="nvim"
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
 # Inspired by https://github.com/m-ou-se/config/blob/master/shellrc.
@@ -124,3 +139,4 @@ source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#504945,underline"
 source ~/.docker/init-zsh.sh || true # Added by Docker Desktop
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh 
