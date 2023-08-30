@@ -4,11 +4,17 @@ config.load_autoconfig(False)
 # reopen tabs
 c.auto_save.session = True
 
-# searx asain search engine
-c.url.searchengines = { "DEFAULT" : "https://searx.info/search?q={}" }
+# searx does not really work but anyway, search engine
+#c.url.searchengines = { "DEFAULT" : "https://searx.work/search?q={}" }
+
+# start page obviously (duckduckgo just looking better though)
+#c.url.start_pages = ["https://search.brave.com/search?q="]
 
 # adblock
-#c.content.blocking.method both
+#c.content.blocking.method = both
+
+# hiding decorations in macos, but it looks extremely bad and not supported with yabai.
+#c.window.hide_decoration = True
 
 # font
 c.fonts.default_family = 'Inconsolata LGC Nerd Font Mono'
