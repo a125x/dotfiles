@@ -92,16 +92,16 @@ ctrl + alt - r : yabai --restart-service
 
 # apps
 ctrl + alt + cmd - f : open /Applications/Safari.app/
-ctrl + alt + cmd - i : open /Applications/kitty.app
+ctrl + alt + cmd - i : exec kitty -d ~/;
 ctrl + alt + cmd - l : open /Applications/Vial.app
 ctrl + alt + cmd - a : open /Applications/DeepL.app/
 ctrl + alt + cmd - t : open /Applications/Telegram.localized/Telegram.app/
 ctrl + alt + cmd - p : open /Applications/Planet\ VPN.app/
 ctrl + alt + cmd - d : open /Applications/Discord.app/
 ctrl + alt + cmd - u : open /Applications/Numi.app/
-ctrl + alt + cmd - s : open /Applications/Sensei.app/
+ctrl + alt + cmd - e : open /Applications/Sensei.app/
 ctrl + alt + cmd - r : open /System/Library/CoreServices/Finder.app/
 ctrl + alt + cmd - v : open /Applications/VSCodium.app/
 ctrl + alt + cmd - m : open /Applications/mpv.app/
-ctrl + alt + cmd - e : open /System/Applications/System\ Settings.app
+ctrl + alt + cmd - s : open /System/Applications/System\ Settings.app
 

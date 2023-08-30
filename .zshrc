@@ -31,7 +31,7 @@ bindkey "^W" backward-kill-word
 bindkey "^H" backward-delete-char      # Control-h also deletes the previous char
 bindkey "^U" backward-kill-line      
 
-source ~/.config/zsh/plugins/git/.git-prompt.sh
+source ~/.config/zsh/plugins/git/git-prompt.sh
 
 precmd () { __git_ps1 %F{yellow}"%1d"%f %F{magenta}"%s → "%f }
 #PROMPT="$(__git_ps1 " \[\033[1;32m\] (%s)\[\033[0m\]")\$"
@@ -137,6 +137,5 @@ export BAT_THEME="gruvbox-dark"
 
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#504945,underline"
-source ~/.docker/init-zsh.sh || true # Added by Docker Desktop
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh 
