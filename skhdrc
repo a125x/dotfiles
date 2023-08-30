@@ -92,6 +92,7 @@ ctrl + alt - r : yabai --restart-service
 
 # apps
 ctrl + alt + cmd - i : exec kitty -d ~/;
+ctrl + alt + cmd - q : open /Applications/qutebrowser.app
 ctrl + alt + cmd - l : open /Applications/Vial.app
 ctrl + alt + cmd - a : open /Applications/DeepL.app/
 ctrl + alt + cmd - t : open /Applications/Telegram.app/

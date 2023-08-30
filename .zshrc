@@ -76,8 +76,7 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias ..="cd .."
 alias ...='cd ../..'
 
-alias v='vim'
-alias m='mvim'
+alias v='nvim'
 alias p='python'
 alias safari='open -a Safari'
 alias eun='euporie-notebook'
@@ -93,7 +92,6 @@ alias nyab='yabai --stop-service'
 alias ls='exa'
 alias sf='sudo lf'
 alias icat="kitty +kitten icat"
-alias n="nvim"
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
 # Inspired by https://github.com/m-ou-se/config/blob/master/shellrc.
