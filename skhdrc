@@ -93,8 +93,8 @@ ctrl + alt - r : yabai --restart-service
 # apps
 ctrl + alt + cmd - i : exec kitty -d ~/;
 ctrl + alt + cmd - q : open -a qutebrowser
-ctrl + alt + cmd - l : open -a vial
-ctrl + alt + cmd - a : open -a deepl
+ctrl + alt + cmd - v : open -a vial
+ctrl + alt + cmd - l : open -a deepl
 ctrl + alt + cmd - t : open -a telegram
 ctrl + alt + cmd - p : open -a planet\ vpn
 ctrl + alt + cmd - d : open -a discord
@@ -102,4 +102,5 @@ ctrl + alt + cmd - u : open -a numi
 ctrl + alt + cmd - f : open -a finder
 ctrl + alt + cmd - m : exec mpv;
 ctrl + alt + cmd - s : open -a system\ settings
-
+ctrl + alt + cmd - b : open -a brave\ browser
+ctrl + alt + cmd - a : open -a safari
