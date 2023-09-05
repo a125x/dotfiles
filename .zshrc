@@ -50,33 +50,11 @@ HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 unsetopt BEEP
 unsetopt LIST_BEEP
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/a125x/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/a125x/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/a125x/opt/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/a125x/opt/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-#brew
-export PATH=/opt/homebrew/bin:$PATH
-export PATH=/Users/a125x/.local/bin:$PATH
-export PATH="/opt/homebrew/sbin:$PATH"
-#jupyter
-export PATH=/Users/a125x/Library/Jupyter/bin:$PATH
-
-alias myip="curl http://ipecho.net/plain; echo"
 alias ..="cd .."
 alias ...='cd ../..'
 
 alias v='nvim'
+alias n='nvim'
 alias p='python'
 alias safari='open -a Safari'
 alias eun='euporie-notebook'
