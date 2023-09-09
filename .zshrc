@@ -67,7 +67,7 @@ alias uncomp='tar -xvf'
 alias cde='codium -r'
 alias yab='yabai --start-service'
 alias nyab='yabai --stop-service'
-alias ls='exa'
+alias ls='eza'
 alias sf='sudo lf'
 alias icat="kitty +kitten icat"
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
@@ -114,4 +114,4 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#504945,underline"
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh
 
-rxfetch
+#rxfetch
