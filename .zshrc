@@ -70,7 +70,7 @@ alias nyab='yabai --stop-service'
 alias ls='eza'
 alias sf='sudo lf'
 alias icat="kitty +kitten icat"
-tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
+#alias cd='zoxide'
 
 # Inspired by https://github.com/m-ou-se/config/blob/master/shellrc.
 
@@ -113,5 +113,6 @@ source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#504945,underline"
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh
+eval "$(zoxide init zsh)"
 
 #rxfetch
