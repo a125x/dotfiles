@@ -50,6 +50,13 @@ HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 unsetopt BEEP
 unsetopt LIST_BEEP
 
+export PATH=$PATH:/nix/var/nix/profiles/default/bin/
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
+
 alias ..="cd .."
 alias ...='cd ../..'
 
