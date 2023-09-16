@@ -101,6 +101,6 @@ ctrl + alt + cmd - d : exec discord
 ctrl + alt + cmd - u : open -a numi
 ctrl + alt + cmd - f : open -a finder
 ctrl + alt + cmd - m : exec mpv;
-ctrl + alt + cmd - s : open -a system\ settings
+ctrl + alt + cmd - e : open -a system\ settings
 ctrl + alt + cmd - b : open -a brave\ browser
 ctrl + alt + cmd - a : open -a safari
